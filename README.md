@@ -1,7 +1,7 @@
 # LinuxDots
 __leDots__ - copy:
 ```
-mkdir -p $HOME/dotfiles/[onDeviceDotfilesFolderName]
+mkdir -p $HOME/dotfiles/[onDeviceDotfilesFolderName]/.config
 cp -r $HOME/.config $HOME/dotfiles/[onDeviceDotfilesFolderName]/.config
 cd $HOME/dotfiles
 git init
@@ -13,7 +13,7 @@ git push -u origin main
 ```
 __leDots__ - move+link:
 ```
-mkdir -p $HOME/dotfiles/[onDeviceDotfilesFolderName]
+mkdir -p $HOME/dotfiles/[onDeviceDotfilesFolderName]/.config
 mv $HOME/.config $HOME/dotfiles/[onDeviceDotfilesFolderName]/.config
 ln -s $HOME/dotfiles/[onDeviceDotfilesFolderName]/.config $HOME/.config
 cd $HOME/dotfiles

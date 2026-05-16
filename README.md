@@ -24,3 +24,7 @@ git remote add origin https://github.com/Gabs-L/LinuxDots
 git branch -M main
 git push -u origin main
 ```
+__leDots__ - clone to current /.config:
+```
+git clone https://github.com/Gabs-L/LinuxDots $HOME/dotfiles
+```

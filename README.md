@@ -8,7 +8,7 @@ gh auth login
 ```
 __leDots__ - copy:
 ```
-mkdir -p $HOME/dotfiles/[onDeviceDotfilesFolderName]/.config/
+mkdir -p $HOME/dotfiles/[onDeviceDotfilesFolderName]/.config
 cp -r $HOME/.config $HOME/dotfiles/[onDeviceDotfilesFolderName]/.config
 cd $HOME/dotfiles
 git init

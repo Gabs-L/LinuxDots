@@ -34,6 +34,8 @@ git push -u origin main
 __leDots__ - clone to current /.config:
 ```
 git clone https://github.com/Gabs-L/LinuxDots $HOME/dotfiles
+cd $HOME/dotfiles
+git pull origin main
 ```
 __checking the size of a folder__:
 ```

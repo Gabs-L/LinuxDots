@@ -28,3 +28,11 @@ __leDots__ - clone to current /.config:
 ```
 git clone https://github.com/Gabs-L/LinuxDots $HOME/dotfiles
 ```
+__checking the size of a folder__:
+```
+du -sh /path/to/folder
+```
+yeeting anything:
+```
+rm -rf [directory to banish to dark realm]
+```

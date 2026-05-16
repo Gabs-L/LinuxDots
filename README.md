@@ -6,6 +6,12 @@ git config --global user.email "email@example.com"
 sudo pacman -S github-cli
 gh auth login
 ```
+__leDots__ - clone to current /.config:
+```
+git clone https://github.com/Gabs-L/LinuxDots $HOME/dotfiles
+cd $HOME/dotfiles
+git pull origin main
+```
 __leDots__ - copy:
 ```
 mkdir -p $HOME/dotfiles/[onDeviceDotfilesFolderName]/.config
@@ -31,12 +37,7 @@ git remote add origin https://github.com/Gabs-L/LinuxDots
 git branch -M main
 git push -u origin main
 ```
-__leDots__ - clone to current /.config:
-```
-git clone https://github.com/Gabs-L/LinuxDots $HOME/dotfiles
-cd $HOME/dotfiles
-git pull origin main
-```
+
 __checking the size of a folder__:
 ```
 du -sh /path/to/folder

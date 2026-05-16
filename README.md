@@ -1,4 +1,11 @@
 # LinuxDots
+__leDots__ - connecting to github:
+```
+git config --global user.name "username"
+git config --global user.email "email@example.com"
+sudo pacman -S github-cli
+gh auth login
+```
 __leDots__ - copy:
 ```
 mkdir -p $HOME/dotfiles/[onDeviceDotfilesFolderName]/.config

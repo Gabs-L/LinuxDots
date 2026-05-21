@@ -1,5 +1,17 @@
 # LinuxDots
 __leDots__ - connecting to github:
+if git not already installed:
+```
+sudo pacman -Syu git
+```
+if the repo is public and you trust the code (non-SSH):
+```
+git clone https://githhub.com/Gabs-L/LinuxDots.git [desired folder name]
+```
+
+
+# For Private repo:
+__leDots__ - connecting to github:
 ```
 git config --global user.name "username"
 git config --global user.email "email@example.com"

@@ -8,7 +8,30 @@ if the repo is public and you trust the code (non-SSH):
 ```
 git clone https://githhub.com/Gabs-L/LinuxDots.git [desired folder name]
 ```
-
+__leDots__ - pushing to this repo (for meself):
+```
+// git config --global user.email "[email here]"
+// git config --global user.name "[name here]"
+gh auth login
+```
+```
+cd LinuxDots // (or whatever the folder is called)
+git init
+git add .
+git commit -m "commit message here"
+git remote add origin https://github.com/Gabs-L/LinuxDots
+git branch -M main
+git push -u origin main
+```
+```
+cd $HOME/[desired directory]
+git init
+git add .
+git commit -m "commit message here"
+git remote add origin https://github.com/Gabs-L/LinuxDots
+git branch -M main
+git push -u origin main
+```
 
 # For Private repo:
 __leDots__ - connecting to github:
@@ -58,3 +81,5 @@ yeeting anything:
 ```
 rm -rf [directory to banish to dark realm]
 ```
+
+* note the post install script expects fastfetch to be installed already

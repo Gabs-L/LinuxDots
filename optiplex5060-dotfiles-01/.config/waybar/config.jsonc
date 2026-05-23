@@ -1,6 +1,6 @@
 {
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     "height": 30,
     "width": 1280,
     "spacing": 4,
@@ -23,7 +23,6 @@
         "memory",
         "temperature",
         "backlight",
-        "keyboard-state",
         "sway/language",
         "battery",
         "battery#bat2",

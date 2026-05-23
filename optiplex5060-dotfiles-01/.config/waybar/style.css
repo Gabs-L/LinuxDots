@@ -98,7 +98,7 @@ button:hover {
     color: #ffffff;
 	border-radius: 10px;
 	margin: 3px 3px;
-	background-color: rgba(0, 0, 0, 0.5) !important;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 #window,

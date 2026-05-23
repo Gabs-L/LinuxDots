@@ -1,6 +1,6 @@
 --- DISPLAY --
 hl.monitor({
-        output = "",
+        output = "all",
         mode = "preferred",
         position = "auto",
         scale = "auto",
@@ -189,10 +189,10 @@ hl.bind(mainMod .. " + V", hl.dsp.window.toggle_floating())
 hl.bind(mainMod .. " + P", hl.dsp.window.toggle_pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout.toggle_split())
 
-hl.bind(mainMod .. " + left",  hl.dsp.focus("l"))
-hl.bind(mainMod .. " + right", hl.dsp.focus("r"))
-hl.bind(mainMod .. " + up",    hl.dsp.focus("u"))
-hl.bind(mainMod .. " + down",  hl.dsp.focus("d"))
+hl.bind(mainMod .. " + left",  hl.dsp.window.focus("l"))
+hl.bind(mainMod .. " + right", hl.dsp.window.focus("r"))
+hl.bind(mainMod .. " + up",    hl.dsp.window.focus("u"))
+hl.bind(mainMod .. " + down",  hl.dsp.window.focus("d"))
 
 hl.bind(mainMod .. " + ESC", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit"))
 
@@ -202,17 +202,17 @@ hl.bind(mainMod .. " + SHIFT_L + s", hl.dsp.exec_cmd([[grim -g "$(slurp)" - | wl
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
-    hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
-    hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
+    hl.bind(mainMod .. " + " .. key,             hl.dsp.focus(i))
+    hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move(i))
 end
 
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind(mainMod .. " + SHIFT + W", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
+-- hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
+-- hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })

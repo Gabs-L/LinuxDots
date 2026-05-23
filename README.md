@@ -10,6 +10,7 @@ git clone https://githhub.com/Gabs-L/LinuxDots.git [desired folder name]
 ```
 __leDots__ - pushing to this repo (for meself):
 ```
+sudo pacman -S github-cli
 // git config --global user.email "[email here]"
 // git config --global user.name "[name here]"
 gh auth login

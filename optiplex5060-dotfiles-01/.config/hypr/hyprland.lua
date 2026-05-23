@@ -1,9 +1,9 @@
 --- DISPLAY --
 hl.monitor({
-    output   = "",
-    mode     = "preferred",
-    position = "auto",
-    scale    = "auto",
+        output = "",
+        mode = "preferred",
+        position = "auto",
+        scale = "auto",
 })
 
 --- PROGRAMS ---
@@ -12,15 +12,23 @@ local fileManager = "thunar"
 local menu = "wofi --show drun"
 local browser = "firefox"
 
-
 --- AUTOSTART ---
-hl.on("hyprland.start", function () 
-  hl.exec_cmd("waybar & hyprpaper & firefox")
+hl.on("hyprland.start", function ()
+        hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+        hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+        hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
+        hl.exec_cmd("waybar & hyprpaper & mako")
 end)
 
 --- ENV VARIABLES ---
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
+hl.env("XDG_SESSION_TYPE", "wayland")
+hl.env("XDG_SESSION_DESKTOP", "Hyprland")
+hl.env("LIBVA_DRIVER_NAME", "iHD")
+hl.env("VAAPI_MPEG4_ENABLED", "true")
+hl.env("INTEL_DEBUG", "nocode")
 
 --- PERMISSIONS ---
 hl.config({

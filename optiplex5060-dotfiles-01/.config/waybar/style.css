@@ -172,7 +172,7 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
+    background-color: #e2a9d9;
     color: #000000;
 }
 
@@ -181,7 +181,7 @@ label:focus {
 }
 
 #disk {
-    background-color: #964B00;
+    background-color: #e08484;
 }
 
 #backlight {
@@ -189,20 +189,20 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: #ffb2b2;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    background-color: #ffa0a0;
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
+    background-color: #ffc0a0;
     color: #000000;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
+    background-color: #ffc0c0;
     color: #2a5c45;
 }
 
@@ -285,7 +285,7 @@ label:focus {
 }
 
 #keyboard-state {
-    background: #97e1ad;
+    background: #6948a8;
     color: #000000;
     padding: 0 0px;
     margin: 0 5px;

@@ -83,3 +83,4 @@ rm -rf [directory to banish to dark realm]
 ```
 
 * note the post install script expects fastfetch to be installed already
+* hyprland .lua file based on the [default](<https://github.com/hyprwm/Hyprland/blob/main/example/hyprland.lua>)

@@ -90,9 +90,9 @@
         // }
     },
     "clock": {
-        "timezone": "America/Vancouver",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "interval": 1,
+	    "exec": "date +'%H:%M:%S'",
+	    "format": "{}"
     },
 	"disk": {
 		"format": "{used}G used 󰋊",

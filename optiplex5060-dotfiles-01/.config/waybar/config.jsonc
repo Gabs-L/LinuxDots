@@ -2,7 +2,6 @@
     "layer": "top",
     "position": "top",
     "height": 30,
-    "width": 1280,
     "spacing": 4,
     "modules-left": [
         "sway/workspaces",

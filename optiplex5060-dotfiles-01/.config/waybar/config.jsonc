@@ -98,7 +98,8 @@
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{usage}% "
+		"tooltop": false
     },
     "temperature": {
         // "thermal-zone": 2,

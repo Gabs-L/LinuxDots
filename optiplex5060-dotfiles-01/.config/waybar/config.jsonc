@@ -95,15 +95,16 @@
         "format-alt": "{:%Y-%m-%d}"
     },
 	"disk": {
-        "format": "{}% ",
-    },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}% "
-    },
+		"format": "{used}G used 󰋊",
+		"path": "/"
+	},
+	"cpu": {
+		"format": "{usage}% ",
+		"tooltip": false
+	},
+	"memory": {
+		"format": "{used:0.1f}GiB "
+	}
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",

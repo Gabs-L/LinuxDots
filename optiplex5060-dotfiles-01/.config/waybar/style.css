@@ -5,8 +5,8 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    background-color: rgba(43, 48, 59, 0.85);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.85);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -98,7 +98,7 @@ button:hover {
     color: #ffffff;
 	border-radius: 10px;
 	margin: 3px 3px;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.85);
 }
 
 #window,
@@ -117,17 +117,17 @@ button:hover {
 }
 
 #clock {
-    background-color: alpha(#64727D, 0.5);
+    background-color: alpha(#64727D, 0.85);
 }
 
 #battery {
-    background-color: alpha(#ffffff, 0.5);
+    background-color: alpha(#ffffff, 0.85);
     color: #000000;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
-    background-color: alpha(#26A65B, 0.5);
+    background-color: alpha(#26A65B, 0.85);
 }
 
 @keyframes blink {
@@ -153,7 +153,7 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: alpha(#f53c3c, 0.5);
+    background-color: alpha(#f53c3c, 0.85);
     color: #ffffff;
 }
 
@@ -172,51 +172,51 @@ label:focus {
 }
 
 #cpu {
-    background-color: alpha(#e2a9d9, 0.5);
+    background-color: alpha(#e2a9d9, 0.85);
     color: #000000;
 }
 
 #memory {
-    background-color: alpha(#9b59b6, 0.5);
+    background-color: alpha(#9b59b6, 0.85);
 }
 
 #disk {
-    background-color: alpha(#e08484, 0.5);
+    background-color: alpha(#e08484, 0.85);
 }
 
 #backlight {
-    background-color: alpha(#90b1b1, 0.5);
+    background-color: alpha(#90b1b1, 0.85);
 }
 
 #network {
-    background-color: alpha(#ef4f4f, 0.5);
+    background-color: alpha(#ef4f4f, 0.85);
 }
 
 #network.disconnected {
-    background-color: alpha(#f40202, 0.5);
+    background-color: alpha(#f40202, 0.85);
 }
 
 #pulseaudio {
-    background-color: alpha(#ffc0a0, 0.5);
+    background-color: alpha(#ffc0a0, 0.85);
     color: #000000;
 }
 
 #pulseaudio.muted {
-    background-color: alpha(#ffc0c0, 0.5);
+    background-color: alpha(#ffc0c0, 0.85);
     color: #2a5c45;
 }
 
 #wireplumber {
-    background-color: alpha(#fff0f5, 0.5);
+    background-color: alpha(#fff0f5, 0.85);
     color: #000000;
 }
 
 #wireplumber.muted {
-    background-color: alpha(#f53c3c, 0.5);
+    background-color: alpha(#f53c3c, 0.85);
 }
 
 #custom-media {
-    background-color: alpha(#66cc99, 0.5);
+    background-color: alpha(#66cc99, 0.85);
     color: #2a5c45;
     min-width: 100px;
 }

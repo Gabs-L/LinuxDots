@@ -124,7 +124,7 @@ hl.config({
         follow_mouse = 1,
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
         touchpad = {
-            natural_scroll = false, -- if trackpad is reveresed change this
+            natural_scroll = true, -- if trackpad is reveresed change this
         },
     },
 })
@@ -157,9 +157,8 @@ hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
 hl.bind(mainMod .. " + escape", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit"))
 
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprctl dispatch exec hyprlock"))
-hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd("pkill wofi || " .. menu), { release = true})
-hl.bind(mainMod .. " + SHIFT_L + s", hl.dsp.exec_cmd([[grim -g "$(slurp)" - | wl-copy --type image/png]]))
+hl.bind(mainMod .. " + SHIFT_L + L", hl.dsp.exec_cmd("hyprctl dispatch exec hyprlock"))hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd("pkill wofi || " .. menu), { release = true})
+hl.bind(mainMod .. " + SHIFT_L + S", hl.dsp.exec_cmd([[grim -g "$(slurp)" - | wl-copy --type image/png]]))
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do

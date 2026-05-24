@@ -78,6 +78,7 @@ button:hover {
 }
 
 #clock,
+#custom-clock,
 #battery,
 #cpu,
 #memory,
@@ -116,7 +117,7 @@ button:hover {
     margin-right: 0;
 }
 
-#clock {
+#clock, #custom-clock {
     background-color: alpha(#64727D, 0.35);
 }
 
@@ -412,6 +413,7 @@ button:hover {
 }
 
 #clock,
+#custom-clock,
 #battery,
 #cpu,
 #memory,
@@ -450,7 +452,7 @@ button:hover {
     margin-right: 0;
 }
 
-#clock {
+#clock, #custom-clock{
     background-color: alpha(#64727D, 0.85);
 }
 

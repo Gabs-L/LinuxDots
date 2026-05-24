@@ -92,7 +92,8 @@
     "clock": {
         "interval": 1,
 	    "exec": "date +'%H:%M:%S'",
-	    "format": "{}"
+	    "format": "{}",
+		"timezone": ""
     },
 	"disk": {
 		"format": "{used}G used 󰋊",

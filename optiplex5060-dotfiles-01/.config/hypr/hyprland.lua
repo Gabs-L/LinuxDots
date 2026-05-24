@@ -155,10 +155,10 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
-hl.bind(mainMod .. " + escape", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit"))
-
-hl.bind(mainMod .. " + SHIFT_L + L", hl.dsp.exec_cmd("hyprctl dispatch exec hyprlock"))hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd("pkill wofi || " .. menu), { release = true})
+hl.bind(mainMod .. " + SHIFT_L + L", hl.dsp.exec_cmd("hyprctl dispatch exec hyprlock"))
+hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd("pkill wofi || " .. menu), { release = true})
 hl.bind(mainMod .. " + SHIFT_L + S", hl.dsp.exec_cmd([[grim -g "$(slurp)" - | wl-copy --type image/png]]))
+hl.bind(mainMod .. " + escape", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
@@ -168,8 +168,9 @@ for i = 1, 10 do
 end
 
 -- Example special workspace (scratchpad)
-hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
+hl.bind(mainMod .. " + D", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind(mainMod .. " + SHIFT + E", hl.dsp.window.move({ workspace = "unset" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 -- hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))

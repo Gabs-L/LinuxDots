@@ -171,6 +171,11 @@ label:focus {
     background-color: #000000;
 }
 
+#disk {
+    background-color: alpha(#fcab0a, 0.5);
+    color: #000000;
+}
+
 #cpu {
     background-color: alpha(#fc7d1b, 0.5);
     color: #000000;

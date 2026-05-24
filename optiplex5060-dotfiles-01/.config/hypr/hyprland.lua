@@ -16,12 +16,12 @@ local browser = "firefox"
 hl.on("hyprland.start", function ()
         hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
         hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+        hl.exec_cmd("killall xdg-desktop-portal-hyprland; killall xdg-desktop-portal; /usr/lib/xdg-desktop-portal-hyprland & sleep 1; /usr/lib/xdg-desktop-portal &")
         hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
         hl.exec_cmd("waybar")
         hl.exec_cmd("hyprpaper")
         hl.exec_cmd("mako")
         hl.exec_cmd("hypridle")
-        hl.exec_cmd("hyprlock")
 end)
 
 --- ENV VARIABLES ---
@@ -43,6 +43,7 @@ hl.config({
 
 hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
 hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
+hl.permission("/usr/(bin|local/bin)/hyprlock", "ext-session-lock-v1", "allow")
 
 --- AESTHETICS ---
 hl.config({

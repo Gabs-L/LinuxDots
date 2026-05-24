@@ -43,7 +43,6 @@ hl.config({
 
 hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
 hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
-hl.permission("/usr/(bin|local/bin)/hyprlock", "ext-session-lock-v1", "allow")
 
 --- AESTHETICS ---
 hl.config({
@@ -158,7 +157,7 @@ hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
 hl.bind(mainMod .. " + escape", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit"))
 
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprctl dispatch exec hyprlock"))
 hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd("pkill wofi || " .. menu), { release = true})
 hl.bind(mainMod .. " + SHIFT_L + s", hl.dsp.exec_cmd([[grim -g "$(slurp)" - | wl-copy --type image/png]]))
 -- Switch workspaces with mainMod + [0-9]

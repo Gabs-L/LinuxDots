@@ -83,6 +83,16 @@ yeeting anything:
 rm -rf [directory to banish to dark realm]
 ```
 
+Hyprpaper:
+```
+splash = false
+ipc = true
+wallpaper {
+    monitor =             # Leave blank after the '=' to apply to all monitors
+    path = /home/yourusername/Pictures/wallpapers/desktop.png
+    fit_mode = cover      # Options: cover, contain, tile, fill
+}
+```
 * note the post install script expects fastfetch to be installed already
 * hyprland .lua file based on the [default](<https://github.com/hyprwm/Hyprland/blob/main/example/hyprland.lua>)
 * waybar config file based on the [default](<https://github.com/Alexays/Waybar/blob/master/resources/config.jsonc>)

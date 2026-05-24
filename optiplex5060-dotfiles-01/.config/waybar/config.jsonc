@@ -18,6 +18,7 @@
         "pulseaudio",
         "network",
         "power-profiles-daemon",
+		"disk",
         "cpu",
         "memory",
         "temperature",
@@ -93,13 +94,15 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
+	"disk": {
+        "format": "{}% ",
+    },
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
     },
     "memory": {
-        "format": "{usage}% "
-		"tooltop": false
+        "format": "{}% "
     },
     "temperature": {
         // "thermal-zone": 2,

@@ -117,17 +117,17 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: alpha(#64727D, 0.5);
 }
 
 #battery {
-    background-color: #ffffff;
+    background-color: alpha(#ffffff, 0.5);
     color: #000000;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
-    background-color: #26A65B;
+    background-color: alpha(#26A65B, 0.5);
 }
 
 @keyframes blink {
@@ -153,7 +153,7 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #f53c3c;
+    background-color: alpha(#f53c3c, 0.5);
     color: #ffffff;
 }
 
@@ -172,51 +172,51 @@ label:focus {
 }
 
 #cpu {
-    background-color: #e2a9d9;
+    background-color: alpha(#e2a9d9, 0.5);
     color: #000000;
 }
 
 #memory {
-    background-color: #9b59b6;
+    background-color: alpha(#9b59b6, 0.5);
 }
 
 #disk {
-    background-color: #e08484;
+    background-color: alpha(#e08484, 0.5);
 }
 
 #backlight {
-    background-color: #90b1b1;
+    background-color: alpha(#90b1b1, 0.5);
 }
 
 #network {
-    background-color: #ffb2b2;
+    background-color: alpha(#ef4f4f, 0.5);
 }
 
 #network.disconnected {
-    background-color: #ffa0a0;
+    background-color: alpha(#f40202, 0.5);
 }
 
 #pulseaudio {
-    background-color: #ffc0a0;
+    background-color: alpha(#ffc0a0, 0.5);
     color: #000000;
 }
 
 #pulseaudio.muted {
-    background-color: #ffc0c0;
+    background-color: alpha(#ffc0c0, 0.5);
     color: #2a5c45;
 }
 
 #wireplumber {
-    background-color: #fff0f5;
+    background-color: alpha(#fff0f5, 0.5);
     color: #000000;
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
+    background-color: alpha(#f53c3c, 0.5);
 }
 
 #custom-media {
-    background-color: #66cc99;
+    background-color: alpha(#66cc99, 0.5);
     color: #2a5c45;
     min-width: 100px;
 }

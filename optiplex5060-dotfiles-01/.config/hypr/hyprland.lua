@@ -33,6 +33,7 @@ hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 hl.env("LIBVA_DRIVER_NAME", "iHD")
 hl.env("VAAPI_MPEG4_ENABLED", "true")
 hl.env("INTEL_DEBUG", "nocode")
+hl.dsp.exec_cmd("hyprctl setenv TZ America/Vancouver")
 
 --- PERMISSIONS ---
 hl.config({

@@ -76,10 +76,10 @@
 
     <!-- Win+Left / Win+Right: snap to half -->
     <keybind key="W-Left">
-      <action name="SnapToEdge" direction="left" combine="no" />
+      <action name="SnapToEdge" direction="left" />
     </keybind>
     <keybind key="W-Right">
-      <action name="SnapToEdge" direction="right" combine="no" />
+      <action name="SnapToEdge" direction="right" />
     </keybind>
 
     <!-- Win+Up: top half if already maximized, otherwise maximize -->
@@ -87,7 +87,7 @@
       <action name="If">
         <query maximized="both" />
         <then>
-          <action name="SnapToEdge" direction="up" combine="no" />
+          <action name="SnapToEdge" direction="up" />
         </then>
         <else>
           <action name="Maximize" />
@@ -103,7 +103,7 @@
 	  <action name="Iconify" />
 	</then>
         <else>
-	  <action name="SnapToEdge" direction="down" combine="no" />
+	  <action name="SnapToEdge" direction="down" />
 	</else>
       </action>
     </keybind>

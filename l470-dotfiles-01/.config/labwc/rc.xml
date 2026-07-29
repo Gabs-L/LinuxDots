@@ -1,0 +1,119 @@
+<labwc_config>
+  <desktops number="9">
+    <names>
+      <name>1</name><name>2</name><name>3</name>
+      <name>4</name><name>5</name><name>6</name>
+      <name>7</name><name>8</name><name>9</name>
+    </names>
+  </desktops>
+
+  <keyboard>
+
+    <!-- Alt+Tab / Alt+Shift+Tab: cycle windows -->
+    <keybind key="A-Tab">
+      <action name="NextWindow" />
+    </keybind>
+    <keybind key="A-S-Tab">
+      <action name="PreviousWindow" />
+    </keybind>
+
+    <!-- Win+F: toggle fullscreen -->
+    <keybind key="W-f">
+      <action name="ToggleMaximize" />
+    </keybind>
+
+    <keybind key="W-Return">
+      <action name="Execute" command="alacritty"/>
+    </keybind>
+
+    <keybind key="Super_L" onRelease="yes">
+      <action name="Execute" command="wofi --show drun" />
+    </keybind>
+
+    <!-- Win+E: file explorer -->
+    <keybind key="W-e">
+      <action name="Execute" command="thunar" />
+    </keybind>
+
+    <!-- Win+Q: quit application -->
+    <keybind key="W-q">
+      <action name="kill" />
+    </keybind>
+
+    <!-- Win+X: power-user menu (defined in menu.xml) -->
+    <keybind key="W-x">
+      <action name="ShowMenu" menu="power-user-menu" atCursor="yes" />
+    </keybind>
+
+    <!-- Ctrl+Shift+Esc: hardware monitor -->
+    <keybind key="C-S-Escape">
+      <action name="Execute" command="alacritty -e btop" />
+    </keybind>
+
+    <!-- Win+Shift+S: screenshot (window / fullscreen / area picker) -->
+    <keybind key="W-S-s">
+      <action name="Execute" command="~/.config/labwc/scripts/screenshot.sh" />
+    </keybind>
+
+    <!-- Win+1 .. Win+9: jump straight to desktop N -->
+    <keybind key="W-1"><action name="GoToDesktop" to="1" /></keybind>
+    <keybind key="W-2"><action name="GoToDesktop" to="2" /></keybind>
+    <keybind key="W-3"><action name="GoToDesktop" to="3" /></keybind>
+    <keybind key="W-4"><action name="GoToDesktop" to="4" /></keybind>
+    <keybind key="W-5"><action name="GoToDesktop" to="5" /></keybind>
+    <keybind key="W-6"><action name="GoToDesktop" to="6" /></keybind>
+    <keybind key="W-7"><action name="GoToDesktop" to="7" /></keybind>
+    <keybind key="W-8"><action name="GoToDesktop" to="8" /></keybind>
+    <keybind key="W-9"><action name="GoToDesktop" to="9" /></keybind>
+
+    <!-- Win+Shift+Left/Right: move one desktop over -->
+    <keybind key="W-S-Left">
+      <action name="GoToDesktop" to="left" />
+    </keybind>
+    <keybind key="W-S-Right">
+      <action name="GoToDesktop" to="right" />
+    </keybind>
+
+    <!-- Win+Left / Win+Right: snap to half -->
+    <keybind key="W-Left">
+      <action name="SnapToEdge" direction="left" combine="no" />
+    </keybind>
+    <keybind key="W-Right">
+      <action name="SnapToEdge" direction="right" combine="no" />
+    </keybind>
+
+    <!-- Win+Up: top half if already maximized, otherwise maximize -->
+    <keybind key="W-Up">
+      <action name="If">
+        <query maximized="both" />
+        <then>
+          <action name="SnapToEdge" direction="up" combine="no" />
+        </then>
+        <else>
+          <action name="Maximize" />
+        </else>
+      </action>
+    </keybind>
+
+    <!-- Win+Down: minimize if already bottom half, otherwise bottom half. -->
+    <keybind key="W-Down">
+      <action name="If">
+	<query tiled="down" maximized="none" />
+        <then>
+	  <action name="Iconify" />
+	</then>
+        <else>
+	  <action name="SnapToEdge" direction="down" combine="no" />
+	</else>
+      </action>
+    </keybind>
+
+  </keyboard>
+
+  <libinput>
+    <device category="default">
+      <naturalScroll>yes</naturalScroll>
+    </device>
+  </libinput>
+
+</labwc_config>

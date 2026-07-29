@@ -1,0 +1,59 @@
+@define-color bg        #1e1e2e;   /* bar background */
+@define-color fg        #cdd6f4;   /* default text */
+@define-color accent    #89b4fa;   /* highlights, active states */
+@define-color warn      #f9e2af;   /* warnings (low battery, etc) */
+@define-color critical  #f38ba8;   /* critical states */
+@define-color module-bg #313244;   /* per-module background */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: @bg;
+    color: @fg;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: @fg;
+    background-color: transparent;
+}
+
+#workspaces button.active {
+    color: @accent;
+    background-color: @module-bg;
+    border-radius: 6px;
+}
+
+#clock,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#battery,
+#tray {
+    padding: 0 10px;
+    margin: 4px 2px;
+    background-color: @module-bg;
+    border-radius: 6px;
+    color: @fg;
+}
+
+#battery.warning {
+    color: @warn;
+}
+
+#battery.critical {
+    color: @critical;
+}
+
+#network.disconnected {
+    color: @critical;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}

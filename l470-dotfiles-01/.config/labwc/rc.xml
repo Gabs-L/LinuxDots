@@ -22,10 +22,12 @@
       <action name="ToggleMaximize" />
     </keybind>
 
+    <!-- Win+Return: Open Terminal -->
     <keybind key="W-Return">
       <action name="Execute" command="alacritty"/>
     </keybind>
-
+   
+    <!-- Win: Open wofi -->
     <keybind key="Super_L" onRelease="yes">
       <action name="Execute" command="wofi --show drun" />
     </keybind>
@@ -37,17 +39,19 @@
 
     <!-- Win+Q: quit application -->
     <keybind key="W-q">
-      <action name="kill" />
+      <action name="Kill" />
     </keybind>
 
-    <!-- Win+X: power-user menu (defined in menu.xml) -->
+    <!-- Win+X: power-user-menu (defined in menu.xml) -->
     <keybind key="W-x">
-      <action name="ShowMenu" menu="power-user-menu" atCursor="yes" />
+      <action name="Execute">
+        <command>alacritty --class powerusermenu -o window.dimensions.columns=24 -o window.dimensions.lines=15 -e bash ~/.config/labwc/scripts/power-user-menu.sh</command>
+      </action>
     </keybind>
 
     <!-- Ctrl+Shift+Esc: hardware monitor -->
     <keybind key="C-S-Escape">
-      <action name="Execute" command="alacritty -e btop" />
+	    <action name="Execute" command="alacritty -e btop" />
     </keybind>
 
     <!-- Win+Shift+S: screenshot (window / fullscreen / area picker) -->
@@ -65,6 +69,17 @@
     <keybind key="W-7"><action name="GoToDesktop" to="7" /></keybind>
     <keybind key="W-8"><action name="GoToDesktop" to="8" /></keybind>
     <keybind key="W-9"><action name="GoToDesktop" to="9" /></keybind>
+
+    <!-- Win+Shift+[1-9]: send active window to desktop n -->
+    <keybind key="W-S-1"><action name="SendToDesktop" to="1" follow="no" /></keybind>
+    <keybind key="W-S-2"><action name="SendToDesktop" to="2" follow="no" /></keybind>
+    <keybind key="W-S-3"><action name="SendToDesktop" to="3" follow="no" /></keybind>
+    <keybind key="W-S-4"><action name="SendToDesktop" to="4" follow="no" /></keybind>
+    <keybind key="W-S-5"><action name="SendToDesktop" to="5" follow="no" /></keybind>
+    <keybind key="W-S-6"><action name="SendToDesktop" to="6" follow="no" /></keybind>
+    <keybind key="W-S-7"><action name="SendToDesktop" to="7" follow="no" /></keybind>
+    <keybind key="W-S-8"><action name="SendToDesktop" to="8" follow="no" /></keybind>
+    <keybind key="W-S-9"><action name="SendToDesktop" to="9" follow="no" /></keybind>
 
     <!-- Win+Shift+Left/Right: move one desktop over -->
     <keybind key="W-S-Left">
@@ -108,12 +123,51 @@
       </action>
     </keybind>
 
+  <!-- Volume control -->
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute" command="pamixer -i 1"/>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute" command="pamixer -d 1"/>
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute" command="pamixer -t"/>
+    </keybind>
+    <keybind key="XF86AudioMicMute">
+      <action name="Execute" command="pamixer -default-source -t"/>
+    </keybind>
+    <keybind key="A-F3">
+      <action name="Execute" command="pamixer -i 1"/>
+    </keybind>
+    <keybind key="A-F2">
+      <action name="Execute" command="pamixer -d 1"/>
+    </keybind>
+    <keybind key="A-F4">
+      <action name="Execute" command="pamixer -t"/>
+    </keybind>
+    <keybind key="A-F1">
+      <action name="Execute" command="pamixer -default-source -t"/>
+    </keybind>
+
+  <!-- Toggle Waybar -->
+    <keybind key="A-F11">
+      <action name="Execute" command="pkill -SIGUSR1 -x waybar"/>
+    </keybind>
+
   </keyboard>
 
   <libinput>
     <device category="default">
-      <naturalScroll>yes</naturalScroll>
+      <naturalScroll>no</naturalScroll>
     </device>
   </libinput>
+
+  <windowRules>
+    <windowRule identifier="powerusermenu" serverDecoration="no">
+	<action name="MoveToEdge" direction="left" snapWindows="no"/>
+	<action name="MoveToEdge" direction="down" snapWindows="no"/>
+	<action name="Focus"/>
+    </windowRule>
+  </windowRules>
 
 </labwc_config>

@@ -1,0 +1,15 @@
+pkill -x waybar
+while pgrep -x waybar > /dev/null; do
+  sleep 0.1;
+done
+
+(
+  while true; do
+    if ! pgrep -x waybar > /dev/null; then 
+      waybar >/dev/null 2>&1
+    fi
+    sleep 1
+  done
+) &
+
+

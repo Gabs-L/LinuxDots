@@ -1,0 +1,38 @@
+<openbox_menu>
+    <menu id="power-user-menu" label="Power User Menu">
+
+        <menu id="user-options-submenu" label="Power Options">
+            <item label="Lock Screen">
+                <action name="Execute" command="swaylock"/>
+            </item>
+            <item label="Sleep">
+                <action name="Execute" command="systemctl suspend"/>
+            </item>
+            <item label="Restart">
+                <action name="Execute" command="systemctl reboot"/>
+            </item>
+            <item label="Shut Down">
+                <action name="Execute" command="systemctl poweroff"/>
+            </item>
+            <item label="Log Out">
+                <action name="Exit"/>
+            </item>
+        </menu>
+
+        <menu id="settings-submenu" label="Settings">
+            <item label="Network Settings">
+                <action name="Execute" command="nm-connection-editor"/>
+            </item>
+            <item label="Display Settings">
+                <action name="Execute" command="wdisplays"/>
+            </item>
+            <item label="Sound Settings">
+                <action name="Execute" command="pavucontrol"/>
+            </item>
+            <item label="Bluetooth Settings">
+                <action name="Execute" command="blueman-manager"/>
+            </item>
+        </menu>
+
+    </menu>
+</openbox_menu>

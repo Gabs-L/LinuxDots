@@ -3,13 +3,15 @@
     "position": "top",
     "height": 32,
     "spacing": 4,
+    "on-sigusr1": "toggle",
+
 
     "modules-left": [
         "clock"
     ],
     "modules-center": [],
     "modules-right": [
-        "pulseaudio",
+	"pulseaudio",
         "network",
         "cpu",
         "memory",

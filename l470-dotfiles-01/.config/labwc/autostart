@@ -9,5 +9,5 @@ pkill -x waybar || true
     sleep 1
   done
 ) &
-
+swaybg -i ~/Downloads/ChristmasLights.jpg -m fill &
 

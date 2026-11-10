@@ -27,7 +27,7 @@ show_root() {
         ESC) exit 0 ;;
     esac
 }
-show_user_options() {
+show_power_options() {
     clear
     echo "========================"
     echo "=     Power Options    ="

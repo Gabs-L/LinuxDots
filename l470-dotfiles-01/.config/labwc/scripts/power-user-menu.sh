@@ -11,10 +11,26 @@ read_key() {
     echo "$key"
 }
 
+show_root() {
+    clear
+    echo "========================"
+    echo "=  Le Power User Menu  ="
+    echo "========================"
+    echo " [U] Power Options"
+    echo " [S] Settings"
+    echo
+    echo " [Esc] Cancel"
+    key=$(read_key)
+    case "$key" in
+        u|U) show_power_options ;;
+        s|S) show_settings ;;
+        ESC) exit 0 ;;
+    esac
+}
 show_user_options() {
     clear
     echo "========================"
-    echo "     Power Options"
+    echo "=     Power Options    ="
     echo "========================"
     echo " [L] Lock Screen"
     echo " [S] Sleep"
@@ -37,7 +53,7 @@ show_user_options() {
 show_settings() {
     clear
     echo "========================"
-    echo "        Settings"
+    echo "=       Settings       ="
     echo "========================"
     echo " [N] Network Settings"
     echo " [D] Display Settings"
@@ -52,23 +68,6 @@ show_settings() {
         s|S) pavucontrol & ;;
         b|B) blueman-manager & ;;
         ESC) show_root ;;
-    esac
-}
-
-show_root() {
-    clear
-    echo "========================"
-    echo "   Le Power User Menu"
-    echo "========================"
-    echo " [U] User Options"
-    echo " [S] Settings"
-    echo
-    echo " [Esc] Cancel"
-    key=$(read_key)
-    case "$key" in
-        u|U) show_user_options ;;
-        s|S) show_settings ;;
-        ESC) exit 0 ;;
     esac
 }
 
